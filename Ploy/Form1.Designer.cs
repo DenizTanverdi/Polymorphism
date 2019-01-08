@@ -28,18 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.dortgenKutuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ıdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uzunKenarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kisaKenarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yukseklikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dortgenKutuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ıdDataGridViewTextBoxColumn,
+            this.urunAdDataGridViewTextBoxColumn,
+            this.uzunKenarDataGridViewTextBoxColumn,
+            this.kisaKenarDataGridViewTextBoxColumn,
+            this.yukseklikDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dortgenKutuBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(105, 34);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(596, 298);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -49,6 +66,40 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dortgenKutuBindingSource
+            // 
+            this.dortgenKutuBindingSource.DataSource = typeof(Ploy.MyClasses.DortgenKutu);
+            // 
+            // ıdDataGridViewTextBoxColumn
+            // 
+            this.ıdDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.ıdDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.ıdDataGridViewTextBoxColumn.Name = "ıdDataGridViewTextBoxColumn";
+            // 
+            // urunAdDataGridViewTextBoxColumn
+            // 
+            this.urunAdDataGridViewTextBoxColumn.DataPropertyName = "UrunAd";
+            this.urunAdDataGridViewTextBoxColumn.HeaderText = "UrunAd";
+            this.urunAdDataGridViewTextBoxColumn.Name = "urunAdDataGridViewTextBoxColumn";
+            // 
+            // uzunKenarDataGridViewTextBoxColumn
+            // 
+            this.uzunKenarDataGridViewTextBoxColumn.DataPropertyName = "UzunKenar";
+            this.uzunKenarDataGridViewTextBoxColumn.HeaderText = "UzunKenar";
+            this.uzunKenarDataGridViewTextBoxColumn.Name = "uzunKenarDataGridViewTextBoxColumn";
+            // 
+            // kisaKenarDataGridViewTextBoxColumn
+            // 
+            this.kisaKenarDataGridViewTextBoxColumn.DataPropertyName = "KisaKenar";
+            this.kisaKenarDataGridViewTextBoxColumn.HeaderText = "KisaKenar";
+            this.kisaKenarDataGridViewTextBoxColumn.Name = "kisaKenarDataGridViewTextBoxColumn";
+            // 
+            // yukseklikDataGridViewTextBoxColumn
+            // 
+            this.yukseklikDataGridViewTextBoxColumn.DataPropertyName = "Yukseklik";
+            this.yukseklikDataGridViewTextBoxColumn.HeaderText = "Yukseklik";
+            this.yukseklikDataGridViewTextBoxColumn.Name = "yukseklikDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
@@ -61,6 +112,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dortgenKutuBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,6 +121,12 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource dortgenKutuBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ıdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunAdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uzunKenarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kisaKenarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yukseklikDataGridViewTextBoxColumn;
     }
 }
 

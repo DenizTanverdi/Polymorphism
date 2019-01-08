@@ -51,5 +51,13 @@ namespace Ploy
 
             dataGridView1.DataSource = dK;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DortgenKutu kutu = (DortgenKutu)dataGridView1.CurrentRow.DataBoundItem;
+            double hacim = kutu.Hacim();
+            int fire = kutu.Fire();
+            MessageBox.Show("Fire + Hacim " + fire + " " + hacim);
+        }
     }
 }
