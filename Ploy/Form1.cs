@@ -28,7 +28,7 @@ namespace Ploy
             kutu.Yukseklik = 20;
             dK.Add(kutu);
             kutu = new DortgenKutu();
-            kutu.Id = 2;
+            kutu.Id = 2;     
             kutu.UrunAd = "Mukavva Kutu";
             kutu.KisaKenar = 15;
             kutu.UzunKenar = 10;
